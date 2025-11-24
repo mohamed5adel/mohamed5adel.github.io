@@ -6,6 +6,12 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* GRADIENT COLORS */
+:root {
+    --grad: linear-gradient(45deg, #4aa8ff, #a855f7);
+    --grad-color: #a46bff;    /* solid fallback color */
+}
+
 /* NAVBAR */
 nav ul {
     list-style: none;
@@ -18,12 +24,15 @@ nav ul li {
     margin: 0 20px;
 }
 nav ul li a {
-    color: #a855f7; /* purple */
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-decoration: none;
     font-size: 18px;
 }
 nav ul li a:hover {
     color: white;
+    -webkit-text-fill-color: white;
 }
 
 /* HERO SECTION */
@@ -40,17 +49,21 @@ nav ul li a:hover {
     height: 350px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #a855f7; /* purple */
+    border: 4px solid var(--grad-color);
 }
 
 .right h1 {
     font-size: 40px;
 }
 .right h1 span {
-    color: #a855f7; /* purple */
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .right h2 {
-    color: #a855f7;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-top: -10px;
 }
 .right p {
@@ -58,18 +71,19 @@ nav ul li a:hover {
     line-height: 1.6;
 }
 
+/* SOCIAL BUTTONS */
 .social a {
     display: inline-block;
     margin-right: 15px;
     margin-top: 15px;
     padding: 8px 15px;
-    border: 1px solid #a855f7;
+    border: 1px solid var(--grad-color);
     border-radius: 20px;
     text-decoration: none;
-    color: #a855f7;
+    color: var(--grad-color);
 }
 .social a:hover {
-    background: #a855f7;
+    background: var(--grad-color);
     color: white;
 }
 
@@ -78,7 +92,9 @@ nav ul li a:hover {
     padding: 50px 20px;
 }
 .section h2 {
-    color: #a855f7;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 28px;
 }
 
@@ -91,10 +107,13 @@ nav ul li a:hover {
 }
 
 .box a {
-    color: #a855f7;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .box a:hover {
     color: white;
+    -webkit-text-fill-color: white;
 }
 
 /* FOOTER */
